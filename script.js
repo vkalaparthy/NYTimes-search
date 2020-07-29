@@ -7,9 +7,12 @@ $(".btn-primary").css({"background-color": "#000099"});
 var searchT = "";
 var searchNum = 1;
 var searchyear = 2020;
-var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=";
+//var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=";
 
 $("#search-button").on("click", function() {
+    //
+    clear();
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=";
     searchT = $("#searchTerm").val();
     queryURL = queryURL+searchT;
     console.log(searchT);
@@ -20,12 +23,12 @@ $("#search-button").on("click", function() {
     console.log(searchyear);
     queryURL = queryURL + "&api-key=HChE63INGzA71ycGg6rH9ZIoqRlyNevj";
     console.log(queryURL);
-    searchArticles();
+    searchArticles(queryURL);
   });
 
 //queryURL = queryURL + "&api-key=HChE63INGzA71ycGg6rH9ZIoqRlyNevj";
 
-  function searchArticles() {
+  function searchArticles(queryURL) {
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -49,8 +52,10 @@ $("#search-button").on("click", function() {
 
     });
   };
+  function clear() {
+    $("#articles").empty();
+  }
 
   $("#clear-button").on("click", function() {
-    $("#articles").empty();
-  
+    clear();
   });
