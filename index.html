@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>NYTimes Search</title>
+    </head>
+
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-10"><i class="fa fa-newspaper" style="font-size:36px"> New York Times Search</i></h1>
+            <p class="lead"></p>
+          </div>
+        </div>
+
+        <div  class="container-fluid" id="displayArea">
+          <div class="card">
+            <div class="card-header">
+              <h5><i class="fa fa-newspaper" style="font-size:24px"> Search Parameters</i></h5>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                  <aside class="col-md-12 bg-light">
+                  <form>
+                      
+                    <div class="form-group">
+                    <label for="searchTerm">Search Term:</label>
+                    <input type="search" class="form-control" id="searchTerm" aria-describedby="search">
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label for="searchNum">Number of Records to Retrieve:</label>
+                        <input type="search" class="form-control" id="searchNum" aria-describedby="search">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="searchYear">Start Year (Optional):</label>
+                        <input type="search" class="form-control" id="searchYear" aria-describedby="search">
+                    </div>
+              
+                  </form>
+                  <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"> Search</i> </button>
+                  <button class="btn btn-primary" id="clear-button"> <i class="fa fa-trash"> Clear Results</i> </button>
+                  </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <br />
+
+        <div class="container-fluid" id="displayArea">
+          <div class="card">
+            <div class="card-header">
+              <h5><i class="fa fa-newspaper" style="font-size:24px"> Top Articles</i></h5>
+            </div>
+            <div class="card-body" id="articles">
+
+            </div>
+        </div>              
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
