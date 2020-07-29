@@ -14,19 +14,19 @@ $("#search-button").on("click", function() {
     //
     clear();
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=";
-    searchT = $("#searchTerm").val();
+    searchT = $("#searchTerm").val().trim();
     queryURL = queryURL+searchT;
     console.log(searchT);
     console.log(queryURL);
-    searchNum = $("#searchNum").val();
+    searchNum = $("#searchNum").val().trim();
     console.log(searchNum);
-    searchstart = $("#searchStart").val();
+    searchstart = $("#searchStart").val().trim();
     console.log(searchstart);
     if (searchstart != "")
-      queryURL = queryURL + "&begin_date="+searchstart;
-    searchend = $("#searchEnd").val();
+      queryURL = queryURL + "&begin_date="+searchstart + "0101";
+    searchend = $("#searchEnd").val().trim();
     if (searchend != "")
-      queryURL = queryURL + "&end_date="+searchend;
+      queryURL = queryURL + "&end_date="+searchend + "0101";
     queryURL = queryURL + "&api-key=HChE63INGzA71ycGg6rH9ZIoqRlyNevj";
     console.log(queryURL);
     searchArticles(searchNum, queryURL);
@@ -43,7 +43,7 @@ $("#search-button").on("click", function() {
       for (var i = 0; i < numCount; i++){
         var newCard = $("<div>").addClass("card");
         var newCardBody = $("<div>").addClass("card-body");
-        var newP1 = $("<p>").text(i+1 + " " + data.response.docs[i].abstract);
+        var newP1 = $("<p>").text(i+1 + ". " + data.response.docs[i].abstract);
         var newP2 = $("<p>").text(data.response.docs[i].byline.original);
         //If subsection_name is not defined, take section_name
         var sectText = data.response.docs[i].subsection_name;
