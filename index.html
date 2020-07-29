@@ -25,7 +25,7 @@
     <body>
         <div class="jumbotron jumbotron-fluid">
           <div class="container">
-            <h1 class="display-10"><i class="fa fa-newspaper" style="font-size:36px"> New York Times Search</i></h1>
+            <h1 class="display-10"><i class="fa fa-newspaper" style="font-size:40px"> New York Times Search</i></h1>
             <p class="lead"></p>
           </div>
         </div>
@@ -37,7 +37,7 @@
             </div>
             <div class="card-body">
               <div class="row">
-                  <aside class="col-md-12 bg-light">
+                  <aside class="col-md-12">
                   <form>
                       
                     <div class="form-group">
@@ -45,16 +45,24 @@
                     <input type="search" class="form-control" id="searchTerm" aria-describedby="search">
                     </div>
 
-                    
-                    <div class="form-group">
-                        <label for="searchNum">Number of Records to Retrieve:</label>
-                        <input type="search" class="form-control" id="searchNum" aria-describedby="search">
+                    <div class="form-group"></div>
+                      <label for="searchNum">Number of Records to Retrieve:</label>
+                        <select class="form-control" id="searchNum">
+                          <option>1</option>
+                          <option>5</option>
+                          <option selected>10</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="searchYear">Start Year (Optional):</label>
-                        <input type="search" class="form-control" id="searchYear" aria-describedby="search">
+                        <label for="searchStart">Start Year (Optional):</label>
+                        <input type="search" class="form-control" id="searchStart" aria-describedby="search" placeholder="20200101">
                     </div>
+
+                    <div class="form-group">
+                      <label for="searchEnd">End Year (Optional):</label>
+                      <input type="search" class="form-control" id="searchEnd" aria-describedby="search" placeholder="20200707">>
+                  </div>
               
                   </form>
                   <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"> Search</i> </button>
