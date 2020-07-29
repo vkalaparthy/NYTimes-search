@@ -18,7 +18,7 @@ $("#search-button").on("click", function() {
     queryURL = queryURL+searchT;
     console.log(searchT);
     console.log(queryURL);
-    searchNum = $("#searchNum").val().trim();
+    searchNum = $("#searchNum").val();
     console.log(searchNum);
     searchstart = $("#searchStart").val().trim();
     console.log(searchstart);
