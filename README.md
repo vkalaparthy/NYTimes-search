@@ -12,7 +12,7 @@ This serach application is located at GitHub at https://github.com/vkalaparthy/N
 ## Usage
 Provide the search parameters and the Top articles for the provided search parameters will be displayed in section that says Top Articles.
 
-<img src="images/NYTimes.png" width="500">
+![Image of NYTimes](images/NYTimes.png)
 
 ## License
 Copyright © 2020-present, Vani Kalaparthy. Released under the MIT License.
